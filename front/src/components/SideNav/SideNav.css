@@ -1,0 +1,22 @@
+.sidenav-cont {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #09c;
+}
+
+.tabs-cont {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-nav-tabs-elems {
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
