@@ -17,7 +17,7 @@ class crearRepresentante {
     )
 
     return {
-      user: omit(nuevoRepresentante.toJSON(), 'numerodedocumento'),
+      user: omit(nuevoRepresentante.toJSON(), ''),
     };
   }
 }

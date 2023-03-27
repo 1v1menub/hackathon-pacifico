@@ -2,8 +2,8 @@ import {DataTypes} from 'sequelize';
 
 import {sequelize} from '../../../helpers/database';
 
-export const LikeComentarioModel = sequelize.define('likecomentario', {
+export const LikePublicacionModel = sequelize.define('likepublicacion', {
 
-	idcomentario:{type:DataTypes.INTEGER, allowNull:false, primaryKey:true},
+	idpublicacion:{type:DataTypes.INTEGER, allowNull:false, primaryKey:true},
   numerodedocumento:{type:DataTypes.INTEGER, allowNull:false, primaryKey:true}
 })
