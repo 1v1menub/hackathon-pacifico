@@ -1,5 +1,37 @@
 .topnav-cont {
     display: flex;
-    background-color: blueviolet;
-    height: 80px;
+    background-color: white;
+    height: 120px;
+    align-items: center;
+    position: relative;
+}
+
+.top-nav-title {
+    font-size: 2.4rem;
+    margin-left: 150px;
+    font-weight: 600;
+}
+
+.top-nav-bell {
+    margin-left: auto;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.topnav-bell-cont {
+    position: relative; 
+    margin-left: auto;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.top-nav-bell:hover {
+    border: 1px solid lightgrey;
+    margin-right: -11px;
+    padding: 10px;
+    border-radius: 1000px;
+    font-size: 46px;
 }

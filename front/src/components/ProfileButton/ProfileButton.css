@@ -1,0 +1,39 @@
+.profile-button-cont {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 100px;
+    cursor: pointer;
+    padding: 10px;
+    height: 70px;
+    min-width: 200px;
+    padding-right: 20px;
+    border-radius: 1000px;
+    align-items: center;
+    color: white;
+}
+
+.profile-button-img {
+    border-radius: 1000px;
+    background-color: white;
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+}
+
+.profile-button-name {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.top-nav-login-link {
+    margin: auto;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.profile-button-downarrow {
+    font-size: 1.2rem;
+}

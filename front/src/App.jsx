@@ -11,7 +11,7 @@ function App() {
       <Toaster />
       <Routes>
         <Route path="/" element={<Main />}>
-          <Route path="/comunidad" element={<div>comunidad</div>}/>
+          <Route path="/" element={<div>comunidad</div>}/>
           <Route path="/recompensas" element={<div>recompensas</div>}/>
           <Route path="/misiones" element={<div>misiones</div>}/>
           <Route path="/tienda" element={<div>tienda</div>}/>
