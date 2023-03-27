@@ -2,9 +2,9 @@ import {Sequelize} from 'sequelize'
   
 // Creating new Object of Sequelize
 export const sequelize = new Sequelize(
-    'test',
+    'hackathon',
     'root',
-    '12345', {
+    '', {
         dialect: 'mysql',       
         host: 'localhost'
     }

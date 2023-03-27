@@ -4,6 +4,7 @@ import cors from 'cors';
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
+var fileupload = require("express-fileupload");
 
 import createRoutes from './routes';
 import Logger from './helpers/logger';
@@ -23,6 +24,7 @@ export default class App {
 
     const app = express();
     app.use(cookieParser());
+    app.use(fileupload());
     app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
     app.use(helmet());
     app.use(express.urlencoded({ limit: '50mb', extended: true }));
