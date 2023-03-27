@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import createRoutes from './routes';
 import Logger from './helpers/logger';
 import { emitter } from './helpers/emitter';
+import { sequelize } from './helpers/database';
 
 require('dotenv').config();
 
@@ -27,7 +28,8 @@ export default class App {
     app.use(express.urlencoded({ limit: '50mb', extended: true }));
     app.use(express.json({ limit: '50mb' }));
     app.set('emitter', emitter);
-
+    
+    sequelize.sync()
     createRoutes(app);
     this.#app = app;
   }
