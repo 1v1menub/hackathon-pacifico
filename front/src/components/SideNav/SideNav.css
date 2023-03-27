@@ -1,8 +1,9 @@
 .sidenav-cont {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 230px;
     background-color: #09c;
+    padding: 10px;
 }
 
 .tabs-cont {
@@ -11,12 +12,28 @@
     align-items: center;
 }
 
+.side-nav-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .side-nav-tabs-elems {
     text-decoration: none;
-    width: fit-content;
     color: white;
-    width: 90%;
-    padding: 10px;
+    align-items: center;
+    width: 95%;
+    padding: 15px;
     border-radius: 10px;
-    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.side-nav-hr {
+    border: 1px solid white;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

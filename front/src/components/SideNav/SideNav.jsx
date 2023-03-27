@@ -1,17 +1,23 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import pacificologo from "../../assets/pacificologo.svg"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import "./SideNav.css"
 
 
 function SideNav({tabs}) {
 
-    const [displays, setDisplays] = useState(tabs.map(() => {
-        return false
-    }))
-    
+    const [displays, setDisplays] = useState([])
 
-    console.log(displays)
+    const location = useLocation()
+
+    useEffect(() => {
+        setDisplays(() => {
+            const result = tabs.map((tab) => {
+                return location.pathname === `/${tab.link}` ? true : false
+            }) 
+            return result
+        })
+    }, [])
 
     const changeDisplays = (index) => {
         setDisplays(() => {
@@ -24,17 +30,18 @@ function SideNav({tabs}) {
     }
 
     const tabsElems = tabs.map((item, index) => {
-        return <Link className="side-nav-tabs-elems" key={item.name} to={`/${item.link}`} style={{backgroundColor: displays[index] ? "#2d2d2e" : "#09c"}} onClick={() => {changeDisplays(index)}}>{item.name}</Link>
+        return <Link className="side-nav-tabs-elems" key={item.name} to={`/${item.link}`} style={{backgroundColor: displays[index] ? "#2d2d2e" : "#09c"}} onClick={() => {changeDisplays(index)}}><div style={{display: "flex", alignItems: "center"}}><div style={{fontSize: "1.5rem", display: "flex", alignItems: "center"}}>{item.icon}</div><span style={{marginLeft: "20px"}}>{item.name}</span></div></Link>
     })
 
 
     return (
         <nav className="sidenav-cont">
-            <Link to="/"><img src={pacificologo} className="side-nav-img" /></Link>
-            <span className="side-nav-welcome">Bienvenido</span>
+            <Link className="side-nav-img" to="/"><img src={pacificologo} /></Link>
             <div className="tabs-cont">
-                {tabsElems}
+                {tabsElems.slice(0,4)}
             </div>
+            <hr className="side-nav-hr"></hr>
+            {tabsElems.slice(4,5)}
         </nav>
     )
 }

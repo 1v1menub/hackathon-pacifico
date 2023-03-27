@@ -15,7 +15,7 @@ function App() {
           <Route path="/recompensas" element={<div>recompensas</div>}/>
           <Route path="/misiones" element={<div>misiones</div>}/>
           <Route path="/tienda" element={<div>tienda</div>}/>
-          
+          <Route path="/ajustes" element={<div>ajustes</div>}/>
         </Route>
         <Route path="/login" element={<div>lolazo</div>}/>
       </Routes>
