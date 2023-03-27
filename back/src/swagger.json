@@ -1,0 +1,90 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Hackathon pacifico",
+        "description": "Tu vieja reky",
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/download": {
+            "get": {
+                "summary": "Retorna el archivo del bucket",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/downloadSuccess"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/upload": {
+            "post": {
+                "summary": "Sube el archivo al bucket",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "file",
+                        "required": true,
+                        "schema": {
+                            "type": "multipart/form-data"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/uploadSuccess"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "downloadSuccess": {
+                "type": "object",
+                "properties": {
+                    "imagen": {
+                        "type": "string",
+                        "example": "Esta ya es la imagen no es ni medio string"
+                    }
+                }
+            },
+            "uploadSuccess": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "Uploaded the file successfully: 70431836-XYOBY.jpeg"
+                    },
+                    "url": {
+                        "type": "url",
+                        "example": "https://storage.googleapis.com/imagenes-hackathon/70431836-XYOBY.jpeg"
+                    }
+                }
+            }
+        }
+    }
+}

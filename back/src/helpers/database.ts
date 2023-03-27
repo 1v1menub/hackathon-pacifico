@@ -2,7 +2,7 @@ import {Sequelize} from 'sequelize'
   
 // Creating new Object of Sequelize
 export const sequelize = new Sequelize(
-    'hackathon',
+    'test',
     'root',
     '', {
         dialect: 'mysql',       

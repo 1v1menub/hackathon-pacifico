@@ -46,6 +46,10 @@ export default (app: Application) => {
     }
   });
 
+
+  logger.info(`adding route [post] /upload`);
   app.post('/upload', upload);
-  app.get('/files/:name', download);
+
+  logger.info(`adding route [get] /file/:name`);
+  app.get('/file', download);
 };
