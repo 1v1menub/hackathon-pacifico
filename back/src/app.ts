@@ -4,6 +4,9 @@ import cors from 'cors';
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from './swagger.json';
+
 
 import createRoutes from './routes';
 import Logger from './helpers/logger';
@@ -22,6 +25,8 @@ export default class App {
     logger.info('Configuring express application');
 
     const app = express();
+
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     app.use(cookieParser());
     app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
     app.use(helmet());

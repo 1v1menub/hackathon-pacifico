@@ -3,6 +3,7 @@ import glob from 'glob';
 import { StatusCodes } from 'http-status-codes';
 import { Method } from './types/methods';
 import Logger from './helpers/logger';
+import { upload, download } from './helpers/file';
 
 const logger = Logger.create('backend:routes');
 
@@ -44,4 +45,11 @@ export default (app: Application) => {
       app.get(handler.route, handler.middlewares, wrapper);
     }
   });
+
+
+  logger.info(`adding route [post] /upload`);
+  app.post('/upload', upload);
+
+  logger.info(`adding route [get] /file/:name`);
+  app.get('/file', download);
 };
