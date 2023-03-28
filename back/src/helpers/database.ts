@@ -2,11 +2,12 @@ import {Sequelize} from 'sequelize'
   
 // Creating new Object of Sequelize
 export const sequelize = new Sequelize(
-    'test',
+    'hackathon',
     'root',
     '', {
         dialect: 'mysql',       
-        host: 'localhost'
+        host: 'localhost',
+        logging: false,
     }
 );
 

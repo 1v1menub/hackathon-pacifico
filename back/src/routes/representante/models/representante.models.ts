@@ -18,6 +18,7 @@ export const RepresentanteModel = sequelize.define('representante', {
 	rucdeempresa:{type:DataTypes.INTEGER, allowNull:false},
 	fecharegistro:{type:DataTypes.DATE, defaultValue: DataTypes.NOW},
 	tiposeguropyme:{type:DataTypes.STRING(50), allowNull:false},
+	contrasena:{type:DataTypes.STRING(50), allowNull:false},
 })
 
 export const EmpresaModel = sequelize.define('empresa', {
