@@ -1,5 +1,7 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import pacificologo from "../../assets/pacificologo.svg"
+import { Arrow90degLeft } from "react-bootstrap-icons"
 import "./Login.css"
 
 
@@ -13,8 +15,13 @@ function Login() {
         })
     }
 
+
     return (
         <div className="login-cont">
+            <Link to="/" className="login-goback">
+                <Arrow90degLeft />
+                <span style={{fontSize: "20px", marginLeft: "20px"}}>Ir a la comunidad</span>
+            </Link>
             <div className="login-middle-cont">
                 <img className="login-img" src={pacificologo} />
                 <form className="login-form">

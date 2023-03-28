@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import ProfileButton from "../ProfileButton/ProfileButton"
+import { UserContext } from "../../context/UserContext"
 import NotisDropdown from "../NotisDropdown/NotisDropdown"
 import ProfileDropdown from "../ProfileDropdown/ProfileDropdown"
 import { Bell, BellFill } from "react-bootstrap-icons"
@@ -10,6 +11,8 @@ function TopNav({ title }) {
 
     const [openNotis, setOpenNotis] = useState(false)
     const [openProfile, setOpenProfile] = useState(false)
+
+    const { isLogged } = useContext(UserContext)
 
     const handleOpenNotis = () => {
         if(openProfile) {
@@ -33,7 +36,7 @@ function TopNav({ title }) {
         <div className="topnav-cont">
             <span className="top-nav-title">{title}</span>
             <div className="topnav-bell-cont">
-                {openNotis ? <BellFill className="top-nav-bell" onClick={handleOpenNotis}/> : <Bell className="top-nav-bell" onClick={handleOpenNotis}/>}
+                {isLogged ? (openNotis ? <BellFill className="top-nav-bell" onClick={handleOpenNotis}/> : <Bell className="top-nav-bell" onClick={handleOpenNotis}/>) : console.log()}
                 {openNotis && <NotisDropdown notis={[]}/>}
             </div>
             <div className="profile-container-for-dropdown">

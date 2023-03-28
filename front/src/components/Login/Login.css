@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .login-middle-cont {
@@ -54,6 +55,7 @@
     font-weight: 600;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
     margin-bottom: 14px;
+    cursor: pointer;
 }
 
 .login-password-input {
@@ -77,4 +79,17 @@
     border: none;
     font-size: 1rem;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.login-goback {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
