@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Routes, Route } from "react-router-dom"
 import { Toaster } from "react-hot-toast"
 import Main from "./components/Main/Main"
+import Login from "./components/Login/Login"
 import './App.css'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
           <Route path="/tienda" element={<div>tienda</div>}/>
           <Route path="/ajustes" element={<div>ajustes</div>}/>
         </Route>
-        <Route path="/login" element={<div>lolazo</div>}/>
+        <Route path="/login" element={<Login />}/>
       </Routes>
     </div>
   )

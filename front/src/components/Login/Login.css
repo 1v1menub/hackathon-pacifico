@@ -1,0 +1,80 @@
+.login-cont {
+    display: flex;
+    flex: 1;
+    background-color: #09c;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-middle-cont {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-img {
+    width: 120px;
+    height: 80px;
+    margin-bottom: 50px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-forgot-password-a {
+    color: white;
+    font-weight: 600;
+}
+
+.login-register-button {
+    color: #09c;
+    background-color: white;
+    border-radius: 1000px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+    margin-bottom: 36px;
+}
+
+.login-login-button {
+    padding: 15px;
+    border: none;
+    background-color: #00Af3f;
+    border-radius: 1000px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+    margin-bottom: 14px;
+}
+
+.login-password-input {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px -2px rgba(24,39,75,.12), 0 4px 4px -2px rgba(24,39,75,.08);
+    border: none;
+    outline: none;
+}
+
+.login-doc-input {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+.login-select {
+    font-weight: 700!important;
+    border: none;
+    font-size: 1rem;
+    margin-right: 10px;
+}

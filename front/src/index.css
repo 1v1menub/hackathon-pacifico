@@ -8,3 +8,9 @@
   box-sizing: border-box;
   margin: 0px;
 }
+
+.display-flex-row-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
