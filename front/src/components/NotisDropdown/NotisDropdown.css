@@ -3,10 +3,11 @@
     display: flex;
     flex-direction: column;
     right: 0;
-    top: 50px;
+    top: 59px;
     width: 300px;
     border-radius: 5px;
     background-color: #09c;
+    align-items: center;
 }
 
 .notis-dropdown-title-cont {
@@ -18,8 +19,9 @@
     color: white;
     font-size: 1.2rem;
     background-color: #09c;
-    border-bottom: 2px solid #EE2C70;
+    border-bottom: 2px solid white;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .noti-link-cont {

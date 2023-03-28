@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 import pacificologo from "../../assets/pacificologo.svg"
 import "./ProfileButton.css"
 
-function ProfileButton() {
+function ProfileButton({handleOpenProfile}) {
 
     const {isLogged, userdata, handleSet} = useContext(UserContext)
 
     return (
-        <div className="profile-button-cont" style={{backgroundColor: isLogged ? "#00Af3f" : "#0075b0"}}>
+        <div className="profile-button-cont" onClick={handleOpenProfile} style={{backgroundColor: isLogged ? "#00Af3f" : "#0075b0"}}>
             {isLogged ?
                 <>
                     <img className="profile-button-img" src={pacificologo /* userdata.profileimage */}/>

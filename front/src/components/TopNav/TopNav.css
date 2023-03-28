@@ -35,3 +35,10 @@
     border-radius: 1000px;
     font-size: 46px;
 }
+
+.profile-container-for-dropdown {
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
