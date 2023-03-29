@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../../context/UserContext"
 import { ChevronDown, PersonFill } from "react-bootstrap-icons"
 import { useNavigate } from "react-router-dom"
-import pacificologo from "../../assets/pacificologo.svg"
+import ignacio from "../../assets/ignacio.jpg"
 import "./ProfileButton.css"
 
 function ProfileButton({handleOpenProfile}) {
@@ -19,8 +19,8 @@ function ProfileButton({handleOpenProfile}) {
         <div className="profile-button-cont" onClick={() => {isLogged ? handleOpenProfile() : handleGoLogin() }} style={{backgroundColor: isLogged ? "#00Af3f" : "#0075b0"}}>
             {isLogged ?
                 <>
-                    <img className="profile-button-img" src={pacificologo /* userdata.profileimage */}/>
-                    <span className="profile-button-name">{"Juanita Paredes" /* userdata.nombre */}</span>
+                    <img className="profile-button-img" src={ignacio /* userdata.profileimage */}/>
+                    <span className="profile-button-name">{"Ignacio Rubio" /* userdata.nombre */}</span>
                     <ChevronDown className="profile-button-downarrow" />
                 </>
                 :
