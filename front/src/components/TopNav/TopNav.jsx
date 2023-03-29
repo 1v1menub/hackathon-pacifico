@@ -10,7 +10,7 @@ import "./TopNav.css"
 function TopNav({ title }) {
 
 
-    const notis = [{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"}]
+    const notis = [{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"}, {title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"}]
 
     const [openNotis, setOpenNotis] = useState(false)
     const [openProfile, setOpenProfile] = useState(false)

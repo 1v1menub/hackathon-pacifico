@@ -1,7 +1,7 @@
 .sidenav-cont {
     display: flex;
     flex-direction: column;
-    width: 230px;
+    width: 250px;
     background-color: #09c;
     padding: 10px;
 }

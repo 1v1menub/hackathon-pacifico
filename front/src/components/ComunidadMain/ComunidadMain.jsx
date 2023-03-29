@@ -1,14 +1,12 @@
-import { useState } from "react"
 import "./ComunidadMain.css"
 
-function ComunidadMain() {
+function ComunidadMain({image}) {
 
 
-    const posts = useState([])
 
     return (
-        <div>
-            
+        <div style={{display: "flex", flex: "1", alignItems: "center", justifyContent: "center"}}>
+            <img src={image} style={{width: "90%"}} />
         </div>
     )
 }

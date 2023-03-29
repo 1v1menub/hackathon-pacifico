@@ -8,6 +8,7 @@
     border-radius: 5px;
     background-color: #09c;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .notis-dropdown-title-cont {
@@ -20,11 +21,17 @@
     font-size: 1.2rem;
     background-color: #09c;
     border-bottom: 2px solid white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
 .noti-link-cont {
     display: flex;
     flex-direction: column;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
 }
