@@ -9,6 +9,9 @@ import "./TopNav.css"
 
 function TopNav({ title }) {
 
+
+    const notis = [{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"},{title: "10 personas likearon tu post 'Instale camaras inteligentes en Bodegon3000'"}]
+
     const [openNotis, setOpenNotis] = useState(false)
     const [openProfile, setOpenProfile] = useState(false)
 
@@ -37,7 +40,7 @@ function TopNav({ title }) {
             <span className="top-nav-title">{title}</span>
             <div className="topnav-bell-cont">
                 {isLogged ? (openNotis ? <BellFill className="top-nav-bell" onClick={handleOpenNotis}/> : <Bell className="top-nav-bell" onClick={handleOpenNotis}/>) : console.log()}
-                {openNotis && <NotisDropdown notis={[]}/>}
+                {openNotis && <NotisDropdown notis={notis}/>}
             </div>
             <div className="profile-container-for-dropdown">
                 <ProfileButton handleOpenProfile={handleOpenProfile}/>

@@ -3,6 +3,8 @@ import "./NotisDropdown.css"
 
 
 function NotisDropdown({notis}) {
+    
+    console.log(notis.length)
 
     return (
         <div className="notis-dropdown-cont">
@@ -10,9 +12,8 @@ function NotisDropdown({notis}) {
                 Notificaciones
             </div>
             {notis.map((noti, index) => {
-                return (<Link to={`/post:${noti.post}`} key={index} className="noti-link-cont">
+                return (<Link to={`/`} key={index} className="noti-link-cont">
                     <span className="noti-link-title">{noti.title}</span>
-                    <span className="noti-link-body">{noti.description}</span>
                 </Link>)
             })}
         </div>
